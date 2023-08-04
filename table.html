@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="breakpoint.css">
+</head>
+<body>
+  <div class="container">
+    <div class="table-responsive"> <!--makes sure that the table can scroll side to side if there is a lot of data. can use table-reponsive-lg (or another size) to declare that the screen should only scroll BELOW said size-->
+      <table class="table table-striped-columns"> <!--or w/o columns and the rows are striped::table-hover highlights row when you hover::table-border creates border::table-borderless gets rid of all of the borders::table-sm will removove some of the padding-->
+        <thead>
+          <tr class="table-active"> <!--highlights as if you are hovering-->
+            <th>First</th>
+            <th>Last</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider"> <!--can use table-group-divider on head, body, and footer only-->
+          <tr class="table-success">
+            <td>Kyle</td>
+            <td>Cook</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td class="table-danger">Sally</td>
+            <td>Cook</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Jim</td>
+            <td>Smith</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>Carrie</td>
+            <td>Long</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>Pawel</td>
+            <td>Jones</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>test</td>
+          </tr>
+        </tfoot>
+      </table>
+  </div>
+  </div>
+</body>
+</html>
