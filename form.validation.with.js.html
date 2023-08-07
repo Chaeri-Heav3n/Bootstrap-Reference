@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="breakpoint.css">
+</head>
+<body>
+  <div class="container">
+    <form novalidate class="was-validated">
+      <div class="form-floating">
+        <input type="email" id="email" class="form-control" placeholder="Place email here" required />
+        <label for="email">Email</label>
+        <div class="invalid-feedback">Invalid email</div> <!-- be sure to put feedback portions after the input. -->
+        <div class="valid-feedback">Correct email</div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </div>
+  
+
+  <script>
+    const form = document.querySelector("form")
+
+    form.addEventListener('submit', e => {
+      if (!form.checkValidity()) {
+        e.preventDefault()
+      }
+
+      form.classList.add('was-validated')
+    })
+  </script>
+  <!-- This JS code is getting the form element. Whenever we are submitting the form, it is calling the checkValitidity method. If it is not valid, then it is going to prevent the form from submitting (red x). And most importantly, if the entry is valid then it is going to add a class to the bootstrap form called was validated (green check).
+  These validations show up automatically when you have the 'was-validated' set in the JS AND the form element. Without it in the form element, the validations appear after hitting the Submit button. Having it appear after the submit button is more ideal.-->
+</body>
+</html>
