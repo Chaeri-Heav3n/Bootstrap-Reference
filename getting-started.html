@@ -9,15 +9,15 @@
   <link rel="stylesheet" href="breakpoint.css">
 </head>
 <body>
-  <div class="container">
-    <div class="row row-cols-2 ">
-      <div class="col">
+  <div class="container"> <!--container fluid means no padding on all sizes-->
+    <div class="row g-5"> <!-- row-cols-# specifies the number of columns. or row-cols-infix-#--><!--g-# or g-infix-# (only 0-5) specificies the gap. gx for x-axis, gy for y-axis, g for each.-->
+      <div class="col"> <!--col auto: the colomn is the exact size of the item inside (text for example). no content, it is empty-->
         <div class="box"></div>
       </div>
-      <div class="col">
+      <div class="col-lg-6"> <!-- when you don't define a default value/a value for smaller screens, for example no col-# with this col-lg-#, then the default value below "col-lg-#" will be 100% wide-->
         <div class="box"></div>
       </div>
-      <div class="col">
+      <div class="col offset-3"> <!-- offsets 3 columns over-->
         <div class="box"></div>
       </div>
       <div class="col">
@@ -28,5 +28,6 @@
       </div>
     </div>
   </div>
+  <!--note: you can place rows within rows-->
 </body>
 </html>
